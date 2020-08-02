@@ -1,0 +1,31 @@
+body {
+    background: linear-gradient(to right,#ac4ef8, #3b8bf5);
+}
+.ml3 {
+    font-weight: 900;
+    font-size: 3.5em;
+    text-align: center;
+    font-family: 'Open Sans';
+}
+.weather {
+    margin-left: 23%;
+    height: 400px;
+    width: 370px;
+    background-color:white;
+}
+.temperature {
+    font-size: 3.0em;
+    text-align: center;
+    font-family: 'Open Sans';
+}
+.location {
+    font-size: 50px;
+    font-family: 'Open Sans'
+}
+.location-icon {
+    font-size: 50px;
+    margin-top: 10px;
+}
+.data {
+    text-align: center;
+}
