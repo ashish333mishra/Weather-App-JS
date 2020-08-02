@@ -34,4 +34,6 @@ function displayWeather(data) {
     let cityName = data.name;
     document.getElementById('temperature').innerHTML = temperature+'°C';
     document.getElementById('location').innerHTML = cityName;
+    document.getElementById('weather-icon').innerHTML = `<img src="icons/${data.weather[0].icon}.png"/>`
+    document.getElementById('description-weather').innerHTML =  data.weather[0].description;
 }

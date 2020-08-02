@@ -12,6 +12,7 @@ body {
     height: 400px;
     width: 370px;
     background-color:white;
+    border-radius:25px;
 }
 .temperature {
     font-size: 3.0em;
@@ -28,4 +29,9 @@ body {
 }
 .data {
     text-align: center;
+}
+.weather-icon {
+    text-align: center;
+    background-color: rgb(174, 184, 243);
+    border-radius: 25px 25px 0px 0px;
 }
