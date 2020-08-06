@@ -73,7 +73,7 @@ function displayWeather(data) {
     document.getElementById('location').textContent = cityName;
     document.getElementById('weather-icon').innerHTML = `<img src="icons/${data.weather[0].icon}.png"/>`
     console.log(document.getElementById('description-weather'))
-    // document.getElementById('description-weather').textContent =  data.weather[0].description; //descroption ids not showing up
+    document.getElementById('description-weather').textContent =  data.weather[0].description;
     document.getElementById("minTemp").textContent = `Min Tempurature : ${minTemp}°C`;
     document.getElementById("maxTemp").textContent = `Max Tempurature : ${maxTemp}°C`;
     return;
