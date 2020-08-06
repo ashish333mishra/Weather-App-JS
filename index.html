@@ -9,27 +9,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main-container">
+    <div class="modal-background" id="modal-background">
+         <div class="modal-content">
+            <center><p>This app requires use of your location please Enable this feature.<br>Thank you 😀</p></center>
+            <center><button id="close">Close</button></center>
+        </div>
+    </div>
+
+    <div class="main-container" id="main">
         <h1 class="ml3">Weather App</h1>
-        <div class="weather">
+
+        <div id="weather">
             <div class="weather-icon" id="weather-icon">
                 <img src="icons/unknown.png" alt="">
-                <div class="description" id="description-weather">
-
-                </div>
+                <div class="description" id="description-weather"></div>
             </div>
-            <div class="temperature" id="temperature">
 
-            </div>
+            <div class="temperature" id="temperature"></div>
             <div class="data">
-            <span class="material-icons location-icon">
-                location_on
-            </span>
-            <span class="location" id="location">
-                
-            </span>
-        </div>
-            
+                <span class="material-icons location-icon">location_on</span>
+                <span class="location" id="location"></span>
+            </div>
+            <span id="minTemp"></span><br>
+            <span id="maxTemp"></span>
         </div>
     </div>
     
