@@ -1,41 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkyPulse Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-    <div class="modal-background" id="modal-background">
-         <div class="modal-content">
-            <center><p>This app requires use of your location please Enable this feature.<br>Thank you 😀</p></center>
-            <center><button id="close">Close</button></center>
+<body data-theme="clear">
+    <div class="aurora aurora-a" aria-hidden="true"></div>
+    <div class="aurora aurora-b" aria-hidden="true"></div>
+
+    <div class="modal-background" id="modal-background" role="dialog" aria-modal="true" aria-labelledby="permission-title">
+        <div class="modal-content">
+            <h2 id="permission-title">Location Access Needed</h2>
+            <p>
+                This app needs your location to show accurate live weather.
+                Please allow location access in your browser prompt.
+            </p>
+            <button id="close" type="button">Understood</button>
         </div>
     </div>
 
-    <div class="main-container" id="main">
-        <h1 class="ml3">Weather App</h1>
-
-        <div id="weather">
-            <div class="weather-icon">
-                <span id="weather-icon"><img src="icons/unknown.png" alt=""></span>
-                <div class="description" id="description-weather"></div>
+    <main class="app-shell" id="main">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">LIVE FORECAST</p>
+                <h1>SkyPulse</h1>
             </div>
-
-
-            <div class="temperature" id="temperature"></div>
-            <div class="data">
-                <span class="material-icons location-icon">location_on</span>
-                <span class="location" id="location"></span>
+            <div class="time-block">
+                <p id="todayDate">--</p>
+                <p id="clockTime">--:--</p>
             </div>
-            <span id="minTemp"></span><br>
-            <span id="maxTemp"></span>
-        </div>
-    </div>
-    
+        </header>
+
+        <section id="weather" class="weather-grid" aria-live="polite">
+            <article class="card hero-card">
+                <div class="hero-left">
+                    <div id="weather-icon" class="icon-wrap">
+                        <img src="icons/unknown.png" alt="weather icon" />
+                    </div>
+                    <div>
+                        <p class="label">Current Weather</p>
+                        <h2 id="description-weather">Loading...</h2>
+                        <p id="location" class="location">Detecting location</p>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="temperature-line">
+                        <span id="temperature">--</span>
+                    </div>
+                    <p id="statusLine" class="status-line">Fetching latest weather data...</p>
+                </div>
+            </article>
+
+            <article class="card metrics-card">
+                <h3>Details</h3>
+                <div class="metrics-grid">
+                    <div class="metric-item">
+                        <span>Feels Like</span>
+                        <strong id="feelsLike">--</strong>
+                    </div>
+                    <div class="metric-item">
+                        <span>Humidity</span>
+                        <strong id="humidity">--</strong>
+                    </div>
+                    <div class="metric-item">
+                        <span>Wind</span>
+                        <strong id="wind">--</strong>
+                    </div>
+                    <div class="metric-item">
+                        <span>Pressure</span>
+                        <strong id="pressure">--</strong>
+                    </div>
+                    <div class="metric-item">
+                        <span>Min Temp</span>
+                        <strong id="minTemp">--</strong>
+                    </div>
+                    <div class="metric-item">
+                        <span>Max Temp</span>
+                        <strong id="maxTemp">--</strong>
+                    </div>
+                    <div class="metric-item">
+                        <span>Visibility</span>
+                        <strong id="visibility">--</strong>
+                    </div>
+                    <div class="metric-item">
+                        <span>Cloudiness</span>
+                        <strong id="cloudiness">--</strong>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
     <script src="app.js"></script>
 </body>
 </html>
